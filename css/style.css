@@ -1,0 +1,183 @@
+
+		
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Leckerli One';
+	src: url('../fonts/LeckerliOne-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+}
+
+* {
+	box-sizing: border-box; 
+}
+
+html * {
+	font-family: Inter!important;
+}
+
+body {
+	background-color: #fff8f5;
+	margin: 0;
+}
+
+main.flexpage {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff8f5;
+	justify-content: center;
+	padding: 0;
+}
+
+nav.fnav {
+	display: flex;
+	justify-content: flex-end;
+	padding-left: 14.5vw;
+	padding-right: 14.5vw;
+	align-items: center;
+	font-size: 1vw;
+}
+
+nav.fnav a.logo {
+	font-family: Leckerli One!important;
+	font-size: 2vw;
+}
+
+nav.fnav a {
+	margin: 0 1em;
+	text-decoration-line: none;
+}
+
+
+nav.fnav a.logo:hover {
+	color: black;
+}
+
+header {
+	height: 5vw;
+	align-content: center;
+	padding: 0;
+}
+
+div.banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image:  url(../img/bg.jpg);
+	background-color: rgba(216, 226, 220, 0.68);
+	background-blend-mode: overlay;
+	padding: 0;
+	background-size: cover;
+	width: 100%;
+	min-height: 50vw;
+	max-height: 1080px;
+}
+
+div.banner span.logo {
+	font-family: Leckerli One!important;
+	font-size: 5vw;
+	margin: 0;
+}
+
+
+div.banner span.text {
+	font-family: Pacifico!important;
+	font-size: 4vw;
+	margin: 0;
+}
+
+div.m {
+	display: flex;
+    background-image: url(../svg/fon.svg);
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 80vw;
+	margin-left: 14.5vw;
+	margin-right: 14.5vw;
+}
+
+div.m div.mid {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 1.75vw;
+}
+
+div.m div.mid div b, div.button {
+	font-size: 2vw;
+}
+
+div.button a {
+	text-decoration-line: none;
+	color: black;
+}
+
+div.m div.photo {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 2vw;
+	max-width: 15vw;
+}
+
+div.button {
+	border: 5px solid #f8d0dc;
+	height: 5.5vw;
+	width: 25vw;
+	border-radius: 25px;
+	margin: auto;
+	padding: 1vw;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+div.button:hover {
+	border: 5px solid #faa3be;
+	cursor: pointer;
+
+}
+
+footer.nobt {
+	display: flex;
+	flex-direction: row;
+	max-height: 295px;
+	padding: 0;
+	padding-left: 14.5vw;
+	padding-right: 14.5vw;
+	justify-content: space-between;
+	font-size: 1vw;
+	height: 14vw;
+}
+
+footer.nobt div {
+	padding-top: 1em;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 1em;
+}
+
+
+footer, header{
+	background: #dbe9e1;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #9d8189;
+}
+
+
+body footer div a[href="#up"] {
+	color: black;
+	text-decoration-line: none;
+}

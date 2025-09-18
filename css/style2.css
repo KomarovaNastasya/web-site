@@ -1,0 +1,60 @@
+body {
+	overflow-x: hidden;
+	
+}
+
+main.gridpage {
+	display: grid;
+	grid-template-columns: 14.5vw 1fr 1fr 1fr 1fr 14.5vw;
+	background-color: #fff8f5;
+	padding: 0;
+	grid-row-gap: 2vw;
+	margin-top: 4vw;
+	margin-bottom: 5vw;
+	font-size: 1.5vw;
+}
+
+main.gridpage div b {
+	font-size: 1.75vw;
+}
+
+b.mainb, p.mainb {
+	font-size: 2vw;
+}
+
+div.scroll {
+	grid-column: 2 / 6;
+	overflow-x: auto; 
+	overflow-y: hidden;
+	display: grid;
+	grid-template-columns: 17vw 17vw 17vw 17vw 17vw;
+	grid-column-gap: 1vw;
+	padding-bottom: 1.5vw;
+}
+
+div.scroll div {
+	display: grid;
+	grid-auto-rows: 5vw;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 1vw;
+	grid-row-gap: 1vw;
+	border-radius: 25px;
+	background-size: cover;
+}
+
+div.scroll div a {
+    background-image: url(../svg/Arrow.svg);
+	background-color: rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	margin: 0.5vw;
+    background-repeat: no-repeat;
+	grid-column: 3 / 4;
+	grid-row: 3 / 4;
+	background-size: 70% 70%;
+	background-position: center;
+}
+
+div.scroll div img {
+	font-size: 2vw;
+	max-width: 100%;
+}

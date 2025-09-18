@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset= 'utf-8'>
+		<title> KNITUNION </title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/jquery.nicescroll.js"></script>
+
+		<style>
+		[id*=rail] { 
+			height: 1vw !important; 
+			border-radius: 10px;
+		}  
+		</style>
+		
+		<script>
+		
+		$(document).ready(
+			function() {
+				$("html").niceScroll({cursoropacitymin:"1",cursorwidth:"1vw",mousescrollstep:"60",cursorcolor:"#edd3db",background:"#f9eaef",cursorborderradius:"10px"});
+		}
+		);
+		
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<nav class="fnav" id="up">
+				<a href="index.html" class="logo">KNITUNION</a>
+				<span style="flex-grow:1;"></span>
+				<a href="page2.html"><b>Каталог</b></a>
+				<a href="page3.html"><b>Заказы</b></a>
+				<a href=""><b>О нас</b></a>
+				<a href=""><b>Контакты</b></a>
+			</nav>
+		</header>
+		
+		<main class="flexpage">
+			<div class="banner">
+			<span class="logo">KNITUNION</span>
+			<span class="text">свяжем мягкое чудо для вас</span>
+			</div>
+			
+			<div class="m">
+				<div class="photo"><img src="img/dog.png" alt="вязаая собака"></div>
+				<div class="mid">
+					<div style="margin-top:-2vw;">
+						<b>Уникальный дизайн</b>
+						<br>
+						<span>Наши игрушки создаются по авторским схемам наших мастеров, которые вы не найдете больше ни у кого.</span>
+					</div>
+					<div style="margin-bottom:2vw;">
+						<b>Подарок с любовью</b>
+						<br>
+						<span>Мы вяжем игрушки с любовью и вниманием к деталям, что делает их прекрасным подарком.</span>
+					</div>
+					<div style="margin-bottom:3vw;">
+						<b>Качество и безопасность</b>
+						<br>
+						<span>Мы используем качественные и безопасных материалов, не вызывающих аллергию.</span>
+					</div>
+					<div style="text-align:center;margin-bottom:3vw;">
+						<b>Найдите свою вязаную игрушку!</b>
+						<div class="button" style="margin-top:2vw;"><a href="page2.html">К каталогу</a></div>
+					</div>
+				</div>
+				<div class="photo"><img src="img/humster.png" alt="вязаный хомяк"><img src="img/cat.png" alt="вязаный кот"></div>
+			</div>
+		</main>
+		
+		<footer class="nobt">
+			<div>
+				<b>Документы</b>
+				<span>Политика конфиденциальности</span>
+				<span>Условия использования</span>
+				<span>Условия возврата</span>
+				<b style="flex-grow:1; align-content: flex-end; margin-bottom:1em;">&copy; KNITUNION, 2024</b>
+			</div>
+			<div>
+				<b>Связаться с нами</b>
+				<span>+7 (789) 456 34 90</span>
+				<span>knitunion@xmail.ru</span>
+			</div>
+			<div>
+				<b>О KNITUNION</b>
+				<a href="page2.html">Каталог</a>
+				<a href="page3.html">Заказы</a>
+				<a href="">О нас</a>
+				<a href="">Контакты</a>
+			</div>
+			<div>
+				<a href="#up"><b>Вверх</b></a>
+			</div>
+			
+		</footer>
+	</body>
+</html>

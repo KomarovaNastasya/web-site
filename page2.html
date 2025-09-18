@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<meta charset= 'utf-8'>
+		<title> KNITUNION - Каталог </title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style2.css">
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/jquery.nicescroll.js"></script>
+		
+		<style>
+		[id*=rail] { 
+			height: 1vw !important; 
+			border-radius: 10px;
+		}  
+		</style>
+		
+		<script>
+		
+		$(document).ready(
+			function() {
+				$("html").niceScroll({cursoropacitymin:"1",cursorwidth:"1vw",mousescrollstep:"60",cursorcolor:"#edd3db",background:"#f9eaef",cursorborderradius:"10px"});
+				$(".scroll").niceScroll({cursoropacitymin:"1",cursorwidth:"1vw",mousescrollstep:"60",enablemousewheel:false,cursorcolor:"#edd3db",background:"#f9eaef",cursorborderradius:"10px"});
+			}
+		);
+		
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<nav class="fnav" id="up">
+				<a href="index.html" class="logo">KNITUNION</a>
+				<span style="flex-grow:1;"></span>
+				<a href="page2.html"><b>Каталог</b></a>
+				<a href="page3.html"><b>Заказы</b></a>
+				<a href=""><b>О нас</b></a>
+				<a href=""><b>Контакты</b></a>
+			</nav>
+		</header>
+		
+		<main class="gridpage">
+			<div style="grid-column: 1 / 2; grid-row: 1 / 11"> </div>
+			<div style="grid-column: 2 / 6;"><b class="mainb">Каталог</b></div>
+			<div style="grid-column: 2 / 4;">В каталоге представлены все доступные на данный момент игрушки, которые вы можете заказать прямо сейчас.</div>
+			<div style="grid-column: 4 / 6;">Выберите понравившиеся игрушки в любой из трёх категорий: «Домашные животные», «Лесные звери» и «Фэнтезийные существа».</div>
+			
+			<div style="grid-column: 2 / 6;"><b>Домашние животные</b></div>
+			<div class="scroll">
+				<div style="background-image: url(img/1_1.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/1_2.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/1_3.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/1_4.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/1_5.jpeg)"><a href=""></a></div>
+			</div>
+			
+			<div style="grid-column: 2 / 6;"><b>Лесные звери</b></div>
+			<div class="scroll">
+				<div style="background-image: url(img/2_1.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/2_2.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/2_3.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/2_4.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/2_5.jpeg)"><a href=""></a></div>
+			</div>
+			
+			<div style="grid-column: 2 / 6;"><b>Фэнтезийные существа</b></div>
+			<div class="scroll">
+				<div style="background-image: url(img/3_1.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/3_2.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/3_3.jfif)"><a href=""></a></div>
+				<div style="background-image: url(img/3_4.jpeg)"><a href=""></a></div>
+				<div style="background-image: url(img/3_5.jpeg)"><a href=""></a></div>
+			</div>
+			
+			<div style="grid-column: 3 / 5; text-align:center"><b class="mainb">Готовы сделать заказ?</b></div>
+			<div style="grid-column: 3 / 5;"><div class="button"><a href="page3.html">К заказу</a></div></div>
+						
+			<div style="grid-column: 6 / 7; grid-row: 1 / 11"> </div>
+		</main>
+		
+		<footer class="nobt">
+			<div>
+				<b>Документы</b>
+				<span>Политика конфиденциальности</span>
+				<span>Условия использования</span>
+				<span>Условия возврата</span>
+				<b style="flex-grow:1; align-content: flex-end; margin-bottom:1em;">&copy; KNITUNION, 2024</b>
+			</div>
+			<div>
+				<b>Связаться с нами</b>
+				<span>+7 (789) 456 34 90</span>
+				<span>knitunion@xmail.ru</span>
+			</div>
+			<div>
+				<b>О KNITUNION</b>
+				<a href="page2.html">Каталог</a>
+				<a href="page3.html">Заказы</a>
+				<a href="">О нас</a>
+				<a href="">Контакты</a>
+			</div>
+			<div>
+				<a href="#up"><b>Вверх</b></a>
+			</div>
+			
+		</footer>
+	</body>
+</html>
