@@ -53,7 +53,7 @@ nav.fnav a {
 	text-decoration-line: none;
 }
 
-
+	
 nav.fnav a.logo:hover {
 	color: black;
 }
@@ -168,6 +168,10 @@ footer, header{
 	background: #dbe9e1;
 }
 
+a {
+	color: #000000;
+}
+
 a:visited {
 	color: black;
 }
@@ -180,4 +184,5 @@ a:hover {
 body footer div a[href="#up"] {
 	color: black;
 	text-decoration-line: none;
+
 }
