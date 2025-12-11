@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <title>Обратная связь | KNITUNION</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <style>
+        [id*=rail] { 
+            height: 1vw !important; 
+            border-radius: 10px;
+        }
+        
+        /* Стили для формы */
+        .feedback-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #f9eaef;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .feedback-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #edd3db;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .feedback-form input:focus,
+        .feedback-form textarea:focus {
+            outline: none;
+            border-color: #d4a5b5;
+        }
+        
+        .submit-btn {
+            background: #d4a5b5;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #c495a5;
+        }
+        
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="fnav" id="up">
+            <a href="index.html" class="logo">KNITUNION</a>
+            <span style="flex-grow:1;"></span>
+            <a href="page2.html"><b>Каталог</b></a>
+            <a href="page3.html"><b>Заказы</b></a>
+            <a href=""><b>О нас</b></a>
+            <a href="page4.html"><b>Контакты</b></a>
+        </nav>
+    </header>
+    
+    <main class="flexpage">
+        <div class="feedback-container">
+            <h2 class="feedback-title">Свяжитесь с нами</h2>
+            <form class="feedback-form" id="feedback-form">
+                <input type="text" name="user_name" placeholder="Ваше имя *" required>
+                <input type="email" name="user_email" placeholder="Ваш email *" required>
+                <textarea name="message" placeholder="Ваше сообщение *" rows="6" required></textarea>
+                <button type="submit" class="submit-btn">Отправить сообщение</button>
+            </form>
+            <div id="success-message" class="message success">
+                Отправлено!
+            </div>
+            <div id="error-message" class="message error">
+                Произошла ошибка.
+            </div>
+        </div>
+    </main>
+    
+		<footer class="nobt">
+			<div>
+				<b>Документы</b>
+				<span>Политика конфиденциальности</span>
+				<span>Условия использования</span>
+				<span>Условия возврата</span>
+				<b style="flex-grow:1; align-content: flex-end; margin-bottom:1em;">&copy; KNITUNION, 2024</b>
+			</div>
+			<div>
+				<b>Связаться с нами</b>
+				<span>+7 (789) 456 34 90</span>
+				<span>knitunion@xmail.ru</span>
+			</div>
+			<div>
+				<b>О KNITUNION</b>
+				<a href="page2.html">Каталог</a>
+				<a href="page3.html">Заказы</a>
+				<a href="">О нас</a>
+				<a href="page4.html">Контакты</a>
+			</div>
+			<div>
+				<a href="#up"><b>Вверх</b></a>
+			</div>
+			
+		</footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("lGKo4_WG_xfyDs75Y");
+        })();
+        
+        $(document).ready(function() {
+            $("html").niceScroll({
+                cursoropacitymin:"1",
+                cursorwidth:"1vw",
+                mousescrollstep:"60",
+                cursorcolor:"#edd3db",
+                background:"#f9eaef",
+                cursorborderradius:"10px"
+            });
+            
+            $('#feedback-form').on('submit', function(event) {
+                event.preventDefault();
+                
+                const submitBtn = $(this).find('.submit-btn');
+                const originalText = submitBtn.text();
+                submitBtn.text('Отправка...');
+                submitBtn.prop('disabled', true);
+                
+                $('#success-message').hide();
+                $('#error-message').hide();
+                
+                emailjs.sendForm(
+                    'service_bi5emeo',
+                    'template_gwak7kt',
+                    this
+                )
+                .then(function() {
+                    $('#success-message').fadeIn(300);
+                    $('#feedback-form')[0].reset();
+                }, function(error) {
+                    console.error('Ошибка EmailJS:', error);
+                    $('#error-message').fadeIn(300);
+                })
+                .finally(function() {
+                    submitBtn.text(originalText);
+                    submitBtn.prop('disabled', false);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
